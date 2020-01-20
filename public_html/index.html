@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>My Task</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                margin: 0;
+            }
+         
+            .header {
+                background-image: url('banner.jpg');
+                background-size: cover;
+                height: 400px;
+                margin-bottom: 50px;
+            }
+            .container{
+                width:900px;
+                margin:auto;
+                background-color: #F5F5F5;
+            }
+            .navbar{
+                background-color: black;
+                height:50px;
+                text-align: center;
+            }
+            .contain{
+                width: 800px;
+                margin: auto;
+            }
+            .header .navbar ul {
+                list-style:none;
+                float:right;
+                padding-left:0;
+                margin-top: 10px;
+            }
+            .header .navbar ul li{
+                float:right;
+                padding:10px;
+                color:#A7A7A7;
+            }
+            .header .navbar img{
+                width:100px;
+                height: 30px;
+                float:left;
+                padding: 10px;
+                padding-left: 0px;
+            }
+            .meeting{
+                width: 45%;
+                float:left;
+            }
+            .screen{
+                width: 40%;
+                float: right
+            }
+            .header .slider .meeting img{
+                width:60px;
+                height: 60px;
+                margin-top: 60px;
+            }
+            .slider .meeting h2{
+                color: white;
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 100;
+                font-size: 20px;
+                text-transform: uppercase;
+                margin-right: 30px; 
+            }
+            .slider .meeting hr{
+                color: #E3E3E3;
+                size: 10px;
+                width:50px;
+                float: left;
+            }
+            .slider .meeting p{
+                color: #A7A7A7;
+                font-size: 12px;
+            }
+            .slider .meeting button{
+                background: none;
+                color: white;
+                padding: 5px;
+                font-size: 11px;
+                width: 90px;
+                border-width: 1px;
+                margin-top: 10px;
+            }
+            .slider .screen img{
+                width:250px;
+                height: 150px;
+                margin-top: 70px;
+            }
+            .assistant .tab {
+                width: 10%;
+                float: left;
+                margin-right: 50px;
+                height: 200px;
+            }
+            .assistant{
+                height: 250px;
+                margin: auto;
+            }
+            .assistant .tab button{
+                width:100%;
+                height: 66.666px;
+                background-color: #333333;
+                border: none;
+                color: white;
+            }
+            .assistant .tab button:hover{
+                background-color: #017FE6;
+            }
+
+            .meetingAssistant {
+                width:45%;
+                display: inline-block;
+                float: left;
+                height: 200px;
+            }
+            .mobile{
+                width: 20%;
+                float: right;
+            }
+            .frame{
+                width:100%;
+                border:none;
+                height: 100%;
+            }
+            .mobile img{
+                width: 100px;
+                height:200px;
+            }
+
+            .features{
+                height: 400px;
+                margin: auto;
+                background-color: white;
+            }
+
+            .features .image{
+                width: 40%;
+                float:left;
+                margin-top:50px;
+                margin-right: 20px;
+            }
+            .features .image img{
+                width:300px;
+                height:200px;
+            }
+            .features .list{
+                width: 50%;
+                float:left;
+                margin-left:25px;
+                margin-top: 35px;
+            }
+            .features .list h2{
+                margin: 0;
+
+            }
+            .features .list hr{
+                border: 1px solid blue;
+                width:50px;
+                float: left;
+                margin-bottom: 0;
+            }
+            /*            .features .list .upload{
+                            display: ;
+                        }*/
+            .features .list .upload img{
+                margin-right: 30px;
+                width:40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+            .features .list .upload .image{
+                width :10%;
+                float:left;
+                margin-top: 20px;
+
+            }
+            .features .list .upload{
+                margin-top:0px;
+                margin-bottom: 0px
+
+            }
+            .features .list .upload .title{
+                width :80%;
+                float:left;
+                margin-top: 0;
+            }
+            .features .list .upload .title h4{
+                margin-bottom: 2px;
+            }
+            .features .list .upload .title p{
+                margin-top: 0;
+                color: #87868B;
+            }
+            .features .list .download img{
+                margin-right: 30px;
+                width:40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+            .features .list .download .image{
+                width :10%;
+                float:left;
+                margin-top: 20px;
+
+            }
+            .features .list .download{
+                margin-top:0px;
+
+            }
+            .features .list .download .title{
+                width :80%;
+                float:left;
+                margin-top: 0;
+            }
+            .features .list .download .title h4{
+                margin-bottom: 2px;
+            }
+            .features .list .download .title p{
+                margin-top: 0;
+                color: #87868B;
+
+            }
+            #para{
+                color: #87868B;
+                margin: 0px
+            }
+
+            .customers{
+                margin:auto;
+                height: 310px;
+            }
+            .customers h1
+            {
+                text-align:center;
+                margin-top: 70px;
+            }
+            .Contact h1{
+                text-align:center;
+                margin-top: 40px;
+            }
+            .customers hr,
+            .Contact hr{
+                border: 1px solid blue;
+                width:50px;
+            }
+            #par{
+                text-align:center;
+                font-size: 13px;
+                margin-top: 0;
+                color:#838383
+
+            }
+
+            .customers .opinions{
+                margin-top: 50px;
+                height: 200px;
+
+            }
+
+            .customers .opinions .first{
+                width:25%;
+                float:left;
+                margin-right:12.5%;
+            }
+
+            .customers .opinions .message{
+                background-color: white;
+                padding: 5px;
+                border-radius: 5px;
+            }
+            .customers .opinions  .image{
+                width: 30%;
+                float:left;
+                margin-top: 10px;
+            }
+            .customers .opinions  .image img{
+                width:50px;
+                height: 50px;
+            }
+            .customers .opinions .manager{
+                width: 70%;
+                float:left;
+            }
+            .customers .opinions  h6{
+                margin-top: 0;
+                color:#838383
+            }
+            .customers .opinions  h3{
+                margin-bottom: 0;
+            }
+            .customers .opinions .second{
+                width:25%;
+                float:left;
+                margin-right:12.5%;
+
+            }
+            .customers .opinions .third{
+                width:25%;
+                float:left;
+            }
+            .customers .opinions p{
+                font-size: 13px;
+                font-style: italic;
+                color:#838383
+
+
+            }
+            .Contact{
+                background-color: white;
+            }
+            .myForm{
+                margin-top: 50px;
+                width:100%;
+                height: 100px;
+                margin-bottom: 15px;
+            }
+            .form{
+                float:left;
+                width:40%;
+                margin-right: 10%;
+
+            }
+            .form input{
+                width:350px;
+                padding: 12px;
+                border: none;
+                border-bottom: 1px solid #E4E4E4;
+            }
+               .form input:focus {
+                outline: none !important;
+                border:1px solid  #017FE6;
+                box-shadow: 0 0 10px #719ECE;
+            }
+            /*            .form input[type='text'],.form input[type='email'] {
+                            padding-bottom: 3px;
+                        }*/
+            .Message{
+                float:left;
+                height: 100%;
+                width:47%;
+                margin-top: 15px;
+                margin-left: 3%;
+            }
+            .Message textArea{
+                width:100%;
+                height:100%;
+                border: none;
+                border-bottom: 1px solid #E4E4E4;
+            }
+             .Message textArea:focus{
+                outline: none !important;
+                border:1px solid  #017FE6;
+                box-shadow: 0 0 10px #719ECE;
+            }
+            .Contact button{
+                margin:auto;
+                display:block;
+                width:90px;
+                height: 30px;
+                border: none;
+                border-radius: 2px;
+                font-size: 10px;
+                margin-top: 40px;
+                background-color: #017FE6;
+                color:white;
+                margin-bottom: 5px;
+            }
+            .footer{
+                background-color: black;
+                height:60px;
+                text-align: center;
+            }
+            .footer ul {
+                list-style:none;
+                float:right;
+                padding-left:0;
+                margin-top: 10px;
+                padding-top: 5px;
+            }
+            .footer ul li{
+                float:right;
+                padding:10px;
+                color:white;
+            }
+            .footer p{
+                float:left;
+                padding: 10px;
+                padding-left: 0px;
+                color: #CCCCCC;
+            }
+            .fa {
+                color:#CCCCCC;
+                text-decoration: none;
+            }
+        </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                fields.Name = document.getElementById('Name');
+                fields.email = document.getElementById('email');
+                fields.subject = document.getElementById('subject');
+                fields.message = document.getElementById('message');
+            }),
+                    function isNotEmpty(value) {
+                        if (value == null || typeof value == 'undefined')
+                            return false;
+                        return (value.length > 0);
+                    },
+                    //  function isEmail(email){
+                            //       let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                                    //                  return re.test(email);
+                                            //  }
+                                                    function isEmail(email) {
+                                                        return /\S+@\S+\.\S+/.test(email);
+                                                    },
+                                                    function fieldValidation(field, validationFunction) {
+                                                        // if (field === null) 
+                                                        // {
+                                                        //        return false;
+                                                        //        }
+                                                        let isFieldValid = validationFunction(field.value)
+                                                        if (!isFieldValid) {
+                                                            field.className = 'placeholderRed';
+                                                        } else {
+                                                            field.className = '';
+                                                        }
+
+                                                        return isFieldValid;
+                                                    },
+                                                    function isValid() {
+                                                        var valid = true;
+
+                                                        valid &= fieldValidation(fields.Name, isNotEmpty);
+                                                        valid &= fieldValidation(fields.email, isEmail);
+                                                        valid &= fieldValidation(fields.subject, isNotEmpty);
+                                                        valid &= fieldValidation(fields.message, isNotEmpty);
+                                                        return valid;
+                                                    }
+
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="navbar">
+                    <div class="contain">  
+                        <img src="logo.png" /> 
+
+                        <ul>
+                            <li>Contact</li>
+                            <li>Reviews</li>
+                            <li>about</li>    
+                            <li>features</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <div class="slider">
+                    <div class="contain">
+                        <div class="meeting">
+                            <img src="bannerlogo.png"/>
+                            <h2>Intellegent meeting management solution</h2>
+                            <hr>
+                            <br/>
+                            <p>
+                                larem ipsum dolor site amel, consecteture, adpisiong edit, aeanean
+                                eusimed, bibendeum laroeel proin grafical dolor sit amet lacus
+                                accusman et vivera justo commodo
+                            </p>
+                            <button>Download</button>
+                        </div>
+
+                        <div class="screen">
+                            <img src="macbook.png"/>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- assistant section-->
+            <div class="assistant">
+                <div class="contain">
+                    <!-- Tab links -->
+                    <div class="tab">
+                        <a href='Tab1.html' target="frame"> 
+                            <button> 
+                                TAB1
+                            </button> 
+                        </a>
+
+                        <a href='Tab2.html' target="frame"> 
+                            <button> 
+                                TAB2
+                            </button> 
+                        </a>
+                        <a href='Tab3.html' target="frame"> 
+                            <button> 
+                                TAB3
+                            </button> 
+                        </a>
+                    </div>  
+                    <div class="meetingAssistant">
+                        <iframe src="Tab1.html" name='frame' class="frame">
+
+                        </iframe>
+                    </div>
+                    <div class="mobile">
+                        <img src="mob.png">
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!-- Features-->
+            <div class="features">
+                <div class="contain">
+                    <div class="image">
+                        <img src="review.jpg">
+                    </div>
+                    <div class="list">
+                        <h2>Feature List Section</h2>
+                        <hr>
+                        <br>
+                        <p id="para">Lorm ipsum dolor sit amit consectetur adipscing elit.
+                            Aenean euismod bibendum laoreet. </p>
+
+                        <div class="upload">
+                            <div class="image">
+                                <img src="upload.png">
+                            </div>
+                            <div class="title">
+
+                                <h4>Title</h4>
+                                <p>Lorm ipsum dolor sit amit consectetur adipscing elit.
+                                    Aenean euismod bibendum laoreet.</p>
+                            </div>
+                        </div>
+                        <div class="download">
+                            <div class="image">
+                                <img src="download.png">
+                            </div>
+                            <div class="title">
+
+                                <h4>Title</h4>
+                                <p>Lorm ipsum dolor sit amit consectetur adipscing elit.
+                                    Aenean euismod bibendum laoreet.</p>
+                            </div>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customers-->
+            <div class="customers">
+                <div class="contain">
+                    <h1>WHAT OUR CUSTOMERS ARE SAYING</h1>
+                    <hr>
+                    <br>
+                    <p id="par">Lorm ipsum dolor sit amit consectetur adipscing elit</p>
+
+                    <div class="opinions">
+                        <div class="first">
+                            <div class="message">
+                                <p>Lorm ipsum dolor sit amit consectetur adipscing elit
+                                    Lorm ipsum dolor sit amit consectetur adipscing elit
+                                    Lorm ipsum dolor sit amit consectetur adipscing eli</p>
+                            </div>
+
+                            <div class="image">
+                                <img src="post.png">
+                            </div>
+                            <div class="manager">
+                                <h3>Jeremy H.</h3>
+                                <h6>Manager</h6>
+                            </div>
+                        </div>
+
+
+                        <div class="second">
+                            <div class="message">
+                                <p>Lorm ipsum dolor sit amit consectetur adipscing elit
+                                    Lorm ipsum dolor sit amit consectetur adipscing elit
+                                    Lorm ipsum dolor sit amit consectetur adipscing eli</p>
+                            </div>
+
+                            <div class="image">
+                                <img src="post.png">
+                            </div>
+                            <div class="manager">
+                                <h3>Jhon S.</h3>
+                                <h6>Freelancer</h6>
+                            </div>
+                        </div>
+                        <div class="third">
+                            <div class="message">
+                                <p>Lorm ipsum dolor sit amit consectetur adipscing elit
+                                    Lorm ipsum dolor sit amit consectetur adipscing elit
+                                    Lorm ipsum dolor sit amit consectetur adipscing eli</p>
+                            </div>
+
+                            <div class="image">
+                                <img src="post.png">
+                            </div>
+                            <div class="manager">
+                                <h3>Susan W.</h3>
+                                <h6>Photographer</h6>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Contact Us -->
+            <div class="Contact">
+                <div class="contain">
+                    <h1>CONTACT US</h1>
+                    <hr>
+                    <br>
+                    <p id="par">Lorm ipsum dolor sit amit consectetur adipscing elit</p>
+                    <div class="myForm">
+                        <div class="form">
+                            <form onsubmit="">
+                                <input type="text" placeholder="Name" id="Name" required/>
+                                <input type="email" placeholder="Email*" id="email" required/>
+                                <input type="text" placeholder="Subject*" id="subject" required/>
+                            </form>
+                        </div>
+
+                        <div class="Message">
+                            <textarea id="message"  maxlength="300" required>Message*</textarea>
+                        </div>
+
+
+                    </div>
+                    <button class="button" onclick="sendContact();">Send Message</button>
+
+                </div>
+            </div>
+            <div class="footer">
+                <div class="contain"> 
+                    <p>&COPY; 2018 adam.ai, All Rights Reserved</p>
+                    <ul>
+                        <li><a href="https://rss.com/?lang=ar" class="fa fa-rss"></a></li>  
+                        <li><a href="https://stumbleupon.com/?lang=ar" class="fa fa-stumbleupon"></a></li>  
+                        <li><a href="https://instagram.com/?lang=ar" class="fa fa-instagram"></a></li>  
+                        <li><a href="https://pinterest.com/?lang=ar" class="fa fa-pinterest"></a></li>  
+                        <li><a href="https://google.com/?lang=ar" class="fa fa-google"></a></li>    
+                        <li><a href="https://twitter.com/?lang=ar" class="fa fa-twitter"></a></li>
+                        <li><a href="https://ar-ar.facebook.com/" class="fa fa-facebook"></a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </body>
+</html>
